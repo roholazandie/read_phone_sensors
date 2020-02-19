@@ -2,3 +2,9 @@ requests
 numpy
 streamlit
 pillow
+black
+paho-mqtt
+opencv-python
+imutils
+PyYAML
+streamlit

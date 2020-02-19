@@ -15,6 +15,19 @@ def record_audio(save_path):
     r = requests.get(ip, stream=True)
     objmp3 = io.BytesIO(r.content)
 
+
+def enable_torch():
+    ip = "http://" + IP + ":8080/enabletorch"
+    r = requests.get(ip)
+
+def disable_torch():
+    ip = "http://" + IP + ":8080/disabletorch"
+    r = requests.get(ip)
+
+def zoom(X):
+    ip = "http://"+IP+":8080/ptz?zoom="+str(X)
+    r = requests.get(ip)
+
 if __name__ == "__main__":
     #take_shots("image.jpg")
     record_audio("")
