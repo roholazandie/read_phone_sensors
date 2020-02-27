@@ -7,4 +7,4 @@ paho-mqtt
 opencv-python
 imutils
 PyYAML
-streamlit
+streamlit==0.52.2

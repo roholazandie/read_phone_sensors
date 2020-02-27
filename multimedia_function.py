@@ -26,7 +26,11 @@ def disable_torch():
 
 def zoom(X):
     ip = "http://"+IP+":8080/ptz?zoom="+str(X)
-    r = requests.get(ip)
+    try:
+        r = requests.get(ip)
+        return True
+    except:
+        return False
 
 if __name__ == "__main__":
     #take_shots("image.jpg")
